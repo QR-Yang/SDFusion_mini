@@ -16,6 +16,8 @@ rifle    04090263 -> 3
 airplane 02691156 -> 4
 ```
 
+Final split sizes: 19503 train shapes and 4887 test shapes.
+
 ## Prepare SDF Data
 
 Raw ShapeNet meshes should be available through:
