@@ -1,0 +1,10 @@
+data/*
+!data/.gitkeep
+checkpoints/*
+outputs/*
+__pycache__/
+*.pyc
+*.log
+nohup.out
+*.dist
+preprocess/isosurface/tbb/

@@ -1,0 +1,11 @@
+torch
+diffusers
+numpy
+h5py
+tqdm
+trimesh
+scikit-image
+einops
+termcolor
+torchvision
+tensorboardX
