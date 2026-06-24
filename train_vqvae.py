@@ -7,10 +7,10 @@ from tqdm import tqdm
 from config import vqvae_config
 from datasets import get_dataloader
 from vqvae import VQVAE
-batch_size = 4
-num_epochs = 50
+batch_size = 12
+num_epochs = 30
 lr = 1e-4
-save_path = "checkpoints/vqvae.pth"
+save_path = "checkpoints/vqvae_1e-4.pth"
 def train():
     device = "cuda"
     dataloader = get_dataloader(batch_size=batch_size)

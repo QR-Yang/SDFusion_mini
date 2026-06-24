@@ -13,7 +13,7 @@ num_samples = 4
 num_train_timesteps = 5000
 num_inference_steps = 5000
 vqvae_path = "checkpoints/vqvae.pth"
-diffusion_path = "checkpoints/class_diffusion.pth"
+diffusion_path = "checkpoints/class_diffusion_5e-5.pth"
 save_dir = "outputs"
 def get_class_id(name):
     if name == "chair":
@@ -57,7 +57,7 @@ def sample():
     os.makedirs(save_dir, exist_ok=True)
     sdf = sdf.cpu().numpy()
     for i in range(num_samples):
-        save_path = save_dir + "/" + class_name + "_" + str(i) + ".obj"
+        save_path = save_dir + "/" + class_name + "2_" + str(i) + ".obj"
         save_obj(sdf[i], save_path)
     print("saved to:", save_dir)
 if __name__ == "__main__":

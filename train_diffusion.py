@@ -9,12 +9,12 @@ from config import vqvae_config
 from datasets import get_dataloader
 from diffusion_unet import ClassConditionedUNet3D
 from vqvae import VQVAE
-batch_size = 8
-num_epochs = 200
-lr = 1e-4
+batch_size = 12
+num_epochs = 30
+lr = 2e-5
 num_train_timesteps = 5000
-vqvae_path = "checkpoints/vqvae.pth"
-save_path = "checkpoints/class_diffusion.pth"
+vqvae_path = "checkpoints/vqvae_1e-4.pth"
+save_path = "checkpoints/class_diffusion_2e-5.pth"
 def train():
     device = "cuda"
     dataloader = get_dataloader(batch_size=batch_size)

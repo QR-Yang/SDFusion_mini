@@ -29,9 +29,8 @@ data/ShapeNet/ShapeNetCore.v1/<synset>/<model_id>/model.obj
 Run preprocessing from the `preprocess` directory. Example:
 
 ```bash
-cd /data/yangqr/test/SDFusion_mini/preprocess
+cd SDFusion_mini/preprocess
 conda activate final
-LD_LIBRARY_PATH=$CONDA_PREFIX/lib:./isosurface:./isosurface/tbb/tbb2018_20180822oss/lib/intel64/gcc4.7 \
 python create_sdf.py --dset shapenet --category chair --reduce 4
 ```
 
@@ -46,9 +45,9 @@ data/ShapeNet/SDF_v1/resolution_64/
 ## Check Data
 
 ```bash
-cd /data/yangqr/test/SDFusion_mini
+cd SDFusion_mini
 conda activate final
-LD_LIBRARY_PATH=$CONDA_PREFIX/lib python datasets.py
+python datasets.py
 ```
 
 Expected SDF tensor shape:
@@ -60,10 +59,10 @@ torch.Size([1, 64, 64, 64])
 ## Train
 
 ```bash
-cd /data/yangqr/test/SDFusion_mini
+cd SDFusion_mini
 conda activate final
-LD_LIBRARY_PATH=$CONDA_PREFIX/lib python train_vqvae.py
-LD_LIBRARY_PATH=$CONDA_PREFIX/lib python train_diffusion.py
+python train_vqvae.py
+python train_diffusion.py
 ```
 
 Checkpoints are written to:
@@ -84,9 +83,9 @@ chair, table, car, rifle, airplane
 Then run:
 
 ```bash
-cd /data/yangqr/test/SDFusion_mini
+cd SDFusion_mini
 conda activate final
-LD_LIBRARY_PATH=$CONDA_PREFIX/lib python sample.py
+python sample.py
 ```
 
 Generated meshes are saved to `outputs/`.
