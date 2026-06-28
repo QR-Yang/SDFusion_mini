@@ -8,3 +8,4 @@ __pycache__/
 nohup.out
 *.dist
 preprocess/isosurface/tbb/
+pretrained/bert-base-uncased/pytorch_model.bin
